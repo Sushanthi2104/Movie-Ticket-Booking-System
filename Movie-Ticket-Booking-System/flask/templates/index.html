@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+</head>
+<body>
+    <h2>Available Movies</h2>
+    <ul>
+        {% for movie in movies %}
+            <li>
+                {{ movie[1] }} 
+                <a href="/book/{{ movie[0] }}">Book Ticket</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,10 @@
+import sqlite3
+
+con = sqlite3.connect('database/movie.db')
+cur = con.cursor()
+cur.execute("CREATE TABLE movies (id INTEGER PRIMARY KEY, name TEXT)")
+cur.execute("INSERT INTO movies (name) VALUES ('Movie 1')")
+cur.execute("INSERT INTO movies (name) VALUES ('Movie 2')")
+cur.execute("INSERT INTO movies (name) VALUES ('Movie 3')")
+con.commit()
+con.close()
